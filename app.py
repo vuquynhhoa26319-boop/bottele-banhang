@@ -14,8 +14,8 @@ from flask import Flask, request
 # =========================
 BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
 
-ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "@min_max1834").strip()  # @username
-ADMIN_CHAT_ID = int(os.getenv("ADMIN_CHAT_ID", "0"))  # optional - recommended
+ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "@min_max18344").strip()  # @username
+ADMIN_CHAT_ID = int(os.getenv("ADMIN_CHAT_ID", "7540411330"))  # optional - recommended
 SHOP_NAME = os.getenv("SHOP_NAME", "VUSMILE").strip()
 
 BANK_NAME = os.getenv("BANK_NAME", "VCB").strip()
@@ -84,6 +84,28 @@ init_db()
 
 # =========================
 # Helpers
+def notify_admin_start(message):
+    if not ADMIN_CHAT_ID:
+        print("[ADMIN_NOTIFY] ADMIN_CHAT_ID chưa được cấu hình")
+        return
+
+    u = message.from_user
+    username = f"@{u.username}" if u.username else "Không có username"
+    full_name = ((u.first_name or "") + " " + (u.last_name or "")).strip() or "Không có tên"
+
+    text = (
+        "🔔 CÓ KHÁCH VỪA NHẤN /start\n\n"
+        f"👤 Tên: {full_name}\n"
+        f"🔗 Username: {username}\n"
+        f"🆔 User ID: {u.id}\n"
+        f"💬 Chat ID: {message.chat.id}\n"
+        f"⏰ Thời gian: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
+    )
+
+    try:
+        bot.send_message(ADMIN_CHAT_ID, text)
+    except Exception as e:
+        print(f"[ADMIN_NOTIFY] Lỗi gửi thông báo admin: {e}")
 # =========================
 def admin_username_clean() -> str:
     return ADMIN_USERNAME.lstrip("@")
@@ -545,8 +567,8 @@ def build_buy_text(from_user, group: str, product: str, price: str, require_hint
 # =========================
 @bot.message_handler(commands=["start"])
 def cmd_start(message):
+    notify_admin_start(message)
     send_with_optional_photo(message.chat.id, "START", text_start(), reply_markup=kb_main())
-
 
 @bot.message_handler(commands=["getid"])
 def cmd_getid(message):
