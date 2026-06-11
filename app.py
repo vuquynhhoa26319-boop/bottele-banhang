@@ -406,7 +406,7 @@ CATALOG = [
             {
                 "item_id": "DOMAIN_370",
                 "group": "TÊN MIỀN",
-                "name": "Tên miền đồng giá",
+                "name": "Mua tên miền đồng giá",
                 "price": "370.000đ",
                 "detail": (
                     "✅ Free giao diện landing web\n"
