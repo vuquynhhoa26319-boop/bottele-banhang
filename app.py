@@ -753,7 +753,25 @@ def log_ping():
             f"ua={request.headers.get('User-Agent','')}"
         )
 
+@bot.message_handler(commands=["checkimg"])
+def cmd_checkimg(message):
+    if not is_admin(message.from_user):
+        bot.reply_to(message, "⛔ Lệnh này chỉ dành cho admin.")
+        return
 
+    parts = message.text.strip().split(maxsplit=1)
+    if len(parts) < 2:
+        bot.reply_to(message, "Dùng: /checkimg ITEM_ZALO_TRUST")
+        return
+
+    key = parts[1].strip().upper()
+    file_id = get_image(key)
+
+    if file_id:
+        bot.reply_to(message, f"✅ Đã có ảnh cho key: {key}\nfile_id: {file_id[:40]}...")
+    else:
+        bot.reply_to(message, f"❌ Chưa có ảnh cho key: {key}")
+        
 # ✅ Telegram webhook endpoint
 @server.post("/webhook")
 def telegram_webhook():
