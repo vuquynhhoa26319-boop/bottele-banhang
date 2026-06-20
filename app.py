@@ -146,9 +146,23 @@ CATALOG = [
             {
                 "item_id": "TELE_CLONE",
                 "group": "TELE",
-                "name": "Tài khoản Telegram Spam nhóm",
-                "price": "35.000đ",
-                "detail": "🐙 **Tài khoản Telegram cơ bản**\n💰 Giá: **35.000đ**\n📌 Hỗ trợ đăng nhập ban đầu\n🎁 bảo hành 1 đổi 1 nếu tài khoản bị đóng băng",
+                "name": "🐙 TELEGRAM CLONE – DÙNG CHO NHÓM",
+                "price": "25.000đ",
+                "detail": (
+                    "🐙 **TELEGRAM CLONE – DÙNG CHO NHÓM** 🐙\n\n"
+                    "✅ Hàng chuyên dùng cho hoạt động nhóm\n"
+                    "✅ Hỗ trợ tương tác, vận hành cộng đồng\n"
+                    "✅ Shop hỗ trợ đăng nhập ban đầu\n"
+                    "✅ Nhận acc kiểm tra rõ ràng\n\n"
+                    "📌 **Lưu ý khi sử dụng:**\n"
+                    "🔹 Chỉ log bằng file 1 lần duy nhất\n"
+                    "🔹 Muốn log sang thiết bị khác cần log thủ công bằng SĐT\n"
+                    "🔹 Log 2 thiết bị bằng file dẫn đến acc bị đăng xuất sẽ không bảo hành\n\n"
+                    "📣 **Điều kiện bảo hành:**\n"
+                    "🎥 Cần quay video từ lúc mở acc đến quá trình kiểm tra sử dụng để shop hỗ trợ bảo hành.\n\n"
+                    "⚠️ Tuyệt đối không dán file .exe vào thư mục khi file chưa được giải nén hoàn toàn.\n\n"
+                    "🎁 Lỗi đóng băng đổi 1 đổi 1 trong 24h theo chính sách bảo hành."
+                ),
                 "require_hint": "Ghi chú: . . ., Số lượng :  ",
             },
             {
@@ -203,8 +217,8 @@ CATALOG = [
                     "👥 ** KÊNH TELEGRAM**\n\n"
                     "📱 1K7–2K mem: **150.000đ**\n"
                     "📱 5K mem: **400.000đ**\n"
-                    "📱 10K mem: **800.000đ**\n"
-                    "📱 20K mem: **1.500.000đ**\n\n"
+                    "📱 10K mem: **600.000đ**\n"
+                    "📱 20K mem: **800.000đ**\n\n"
                     "🎁 Mua 8 tặng 1 (cùng loại)\n"
                     "📌 Bàn giao quyền sở hữu theo quy trình"
                 ),
@@ -217,11 +231,12 @@ CATALOG = [
                 "price": "Xem chi tiết",
                 "detail": (
                     "🔥 ** MEM ONLINE**\n\n"
-                    "📱 500 Mem online : **400.000đ**\n"
-                    "📱 1K Mem online : **800.000đ**\n"
-                    "📱 2K Mem online : **1.500.000đ**\n"
-                    "📱 5K Mem online : **4.000.000đ**\n"
-                    "📱 10K Mem online : **7.500.000đ**\n\n"
+                    "📱 1K7–2K mem: **150.000đ**\n"
+                    "📱 5K mem: **400.000đ**\n"
+                    "📱 10K mem: **600.000đ**\n"
+                    "📱 20K mem: **800.000đ**\n\n"
+                    "🎁 Mua 8 tặng 1 (cùng loại)\n"
+                    "📌 Bàn giao quyền sở hữu theo quy trình"
                     "🎁 THỜI HẠN 30 NGÀY , BẢO HÀNH KHI TUỘT MEM ONLINE\n"
                     "⚠️ CUNG CẤP NHÓM CÓ SỐ LƯỢNG MEM THEO YÊU CẦU. BÀN GIAO BẰNG CÁCH CHUYỂN QUYỀN CHỦ SỞ HỮU NHÓM - CÓ HỖ TRỢ CẦM CHỦ SỞ HỮU."
                 ),
