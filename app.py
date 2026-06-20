@@ -453,6 +453,31 @@ CATALOG = [
         "img_key": "CAT_OTP",
     },
     {
+        "cat_id": "PROXY",
+        "title": "✅ PROXY",
+        "desc": "✅ **Proxy: VIETTEL - VNPT - FPT**\n👉 Chọn mục bên dưới 👇",
+        "items": [
+            {
+                "item_id": "PROXY_STATIC",
+                "group": "PROXY",
+                "name": "Proxy tĩnh: VIETTEL - VNPT - FPT",
+                "price": "1.000đ/ngày",
+                "detail": (
+                    "✅ **Proxy tĩnh: VIETTEL - VNPT - FPT**\n\n"
+                    "💰 **Giá:** 1.000đ/ngày\n\n"
+                    "📌 Đầu IP\n"
+                    "🔹 Ngẫu nhiên\n\n"
+                    "🌐 Đầy đủ các giao thức: HTTP và SOCKS5\n"
+                    "🔐 Đầy đủ tài khoản và mật khẩu\n"
+                    "🐙 Bảo hành đúng số ngày sử dụng\n\n"
+                    "🐙 Truy cập https://proxy24h.store/"
+                ),
+                "require_hint": "Ghi chú: số lượng, số ngày sử dụng, nhà mạng nếu có yêu cầu: ",
+            },
+        ],
+        "img_key": "CAT_PROXY",
+    },
+    {
         "cat_id": "BOT",
         "title": "🤖🧠 BOT SPAM NHẬN KM NẠP ĐẦU",
         "desc": (
