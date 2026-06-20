@@ -653,14 +653,15 @@ def cmd_setimg(message):
 def on_photo(message):
     file_id = message.photo[-1].file_id
 
-    bot.reply_to(message, f"✅ file_id:\n`{file_id}`", parse_mode="Markdown")
-
     key = admin_waiting_img_key.get(message.chat.id)
+
     if key and is_admin(message.from_user):
         set_image(key, file_id)
         admin_waiting_img_key.pop(message.chat.id, None)
         bot.reply_to(message, f"✅ Đã gắn ảnh cho {key}.")
+        return
 
+    bot.reply_to(message, f"✅ Bot đã nhận ảnh.\nfile_id: {file_id}")
 
 # =========================
 # Callbacks
