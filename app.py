@@ -646,7 +646,7 @@ def cmd_setimg(message):
 
     key = parts[1].strip().upper()
     admin_waiting_img_key[message.chat.id] = key
-    bot.reply_to(message, f"📷 OK. Giờ hãy gửi **ảnh** để gắn vào KEY: **{key}**.", parse_mode="Markdown")
+    bot.reply_to(message, f"📷 OK. Giờ hãy gửi ảnh để gắn vào KEY: {key}.")
 
 
 @bot.message_handler(content_types=["photo"])
@@ -659,7 +659,7 @@ def on_photo(message):
     if key and is_admin(message.from_user):
         set_image(key, file_id)
         admin_waiting_img_key.pop(message.chat.id, None)
-        bot.reply_to(message, f"✅ Đã gắn ảnh cho **{key}**.", parse_mode="Markdown")
+        bot.reply_to(message, f"✅ Đã gắn ảnh cho {key}.")
 
 
 # =========================
